@@ -17,11 +17,9 @@ public class BubbleSortTest {
 
     public static void bubbleSort(int[] source) {
         for (int i = 0; i < source.length; i++) {
-            int flag = i;
-            for (int j = 0; j < source.length - i - 1; j++) {
-                if (source[i + j + 1] < source[flag]) {
-                    swap(source, flag + 1, i + j + 2);
-                    flag = i + j + 1;
+            for (int j = 0; j < source.length -i - 1; j++) {
+                if (source[j + 1] < source[j]) {
+                    swap(source, j + 1, j + 2);
                 }
             }
         }
